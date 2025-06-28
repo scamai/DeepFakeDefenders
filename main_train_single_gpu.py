@@ -42,10 +42,10 @@ cfg.train = CN(new_allowed=True)
 cfg.train.resume = False
 cfg.train.resume_path = ''
 cfg.train.params_path = ''
-cfg.train.batch_size = 16
+cfg.train.batch_size = 4
 cfg.train.epoch_num = 20
 cfg.train.epoch_start = 0
-cfg.train.worker_num = 8
+cfg.train.worker_num = 0
 
 # : optimizer params
 cfg.optimizer = CN(new_allowed=True)

@@ -240,7 +240,10 @@ class TrainEngine(object):
         if ema_start:
             ema_file_name = os.path.join(file_root,
                                                      time.strftime('%Y%m%d-%H-%M', time.localtime()) + '-EMA-' + str(epoch_idx) + '.pth')
-            ema_stact_dict = self.ema_model.module.module.state_dict()
+            if self.DDP:
+                ema_stact_dict = self.ema_model.module.module.state_dict()
+            else:
+                ema_stact_dict = self.ema_model.module.state_dict()
             torch.save(
                 {
                     'epoch_idx': epoch_idx,
