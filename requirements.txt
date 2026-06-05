@@ -1,7 +1,7 @@
 asttokens==2.4.1
 einops==0.8.0
 numpy==1.22.0
-opencv-python==4.8.0.74 
+opencv-python==4.8.1.78 
 pillow==9.5.0
 PyYAML==6.0.1
 scikit-image==0.21.0
